@@ -1,0 +1,29 @@
+{
+  "name": "rn-actions-floating-button",
+  "version": "1.0.0",
+  "description": "An animated floating button with actions buttons",
+  "main": "./actions-floating-button/actions-floating-button.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShellyAmbar/rn-actions-floating-button.git"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-native": "0.72.3"
+  },
+  "keywords": [
+    "floatingbutton",
+    "floating",
+    "animatedactions",
+    "actions"
+  ],
+  "author": "Shelly Ambar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShellyAmbar/rn-actions-floating-button/issues"
+  },
+  "homepage": "https://github.com/ShellyAmbar/rn-actions-floating-button#readme"
+}
