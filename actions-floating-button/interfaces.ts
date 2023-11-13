@@ -4,6 +4,7 @@ type ActionButton = {
   id: number;
   icon: () => JSX.Element;
   style?: ViewStyle;
+  onClick?: () => void;
 };
 type ActionsFloatingButtonProps = {
   actionButtons: ActionButton[];

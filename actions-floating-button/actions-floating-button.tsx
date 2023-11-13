@@ -1,7 +1,7 @@
-import {View, TouchableOpacity, Animated} from "react-native";
+import {View, TouchableOpacity, Animated, Image} from "react-native";
 import React, {useRef} from "react";
 import createStyles from "./actions-floating-button.styles";
-import Close from "../assets/images/closeIconWhite.svg";
+import Close from "@equalbill/assets/images/closeIconWhite.svg";
 import ActionsFloatingButtonProps from "./interfaces";
 const ActionsFloatingButton = ({
   actionButtons,
@@ -51,7 +51,12 @@ const ActionsFloatingButton = ({
   return (
     <View style={styles.container}>
       {actionButtons?.map((button, index) => (
-        <TouchableOpacity key={button.id}>
+        <TouchableOpacity
+          onPress={() => {
+            button.onClick && button.onClick();
+          }}
+          key={button.id}
+        >
           <Animated.View
             style={[
               styles.button,
@@ -65,7 +70,12 @@ const ActionsFloatingButton = ({
           </Animated.View>
         </TouchableOpacity>
       ))}
-      <TouchableOpacity onPress={toggleMenu}>
+      <TouchableOpacity
+        onPress={() => {
+          toggleMenu();
+          closeButton?.onClick && closeButton.onClick();
+        }}
+      >
         <Animated.View style={[styles.button, rotation]}>
           {closeButton && closeButton?.icon() ? (
             closeButton.icon()
