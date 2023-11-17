@@ -1,7 +1,7 @@
 import {View, TouchableOpacity, Animated, Image} from "react-native";
 import React, {useRef} from "react";
 import createStyles from "./actions-floating-button.styles";
-import Close from "@equalbill/assets/images/closeIconWhite.svg";
+import Plus from "../assets/images/PlusIcon.svg";
 import ActionsFloatingButtonProps from "./interfaces";
 const ActionsFloatingButton = ({
   actionButtons,
@@ -81,7 +81,7 @@ const ActionsFloatingButton = ({
           {closeButton && closeButton?.icon() ? (
             closeButton.icon()
           ) : (
-            <Close fill="#FFFF" width={24} height={24} />
+            <Plus width={24} height={24} />
           )}
         </Animated.View>
       </TouchableOpacity>
