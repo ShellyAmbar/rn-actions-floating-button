@@ -6,6 +6,7 @@ import ActionsFloatingButtonProps from "./interfaces";
 const ActionsFloatingButton = ({
   actionButtons,
   closeButton,
+  style,
 }: ActionsFloatingButtonProps) => {
   const styles = createStyles({size: 60});
   const animation = new Animated.Value(0);
@@ -49,7 +50,7 @@ const ActionsFloatingButton = ({
     outputRange: [0, 1],
   });
   return (
-    <View style={styles.container}>
+    <View style={{...styles.container, ...style}}>
       {actionButtons?.map((button, index) => (
         <TouchableOpacity
           onPress={() => {

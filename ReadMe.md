@@ -31,11 +31,12 @@
 
 #ActionButton Props -
 
-| Name  | Type              | Default |
-| ----- | ----------------- | ------- |
-| id    | number            |
-| icon  | () => JSX.Element |
-| style | ViewStyle         |
+| Name    | Type              | Default |
+| ------- | ----------------- | ------- |
+| id      | number            |
+| icon    | () => JSX.Element |
+| style   | ViewStyle         |
+| onClick | () => void        |
 
 #ActionsFloatingButton Props -
 | Name | Type | Default |

@@ -7,7 +7,8 @@ type ActionButton = {
   onClick?: () => void;
 };
 type ActionsFloatingButtonProps = {
-  actionButtons: ActionButton[];
+  actionButtons?: ActionButton[];
   closeButton?: ActionButton;
+  style?: ViewStyle;
 };
 export default ActionsFloatingButtonProps;
