@@ -8,7 +8,8 @@ type ActionButton = {
 };
 type ActionsFloatingButtonProps = {
   actionButtons?: ActionButton[];
-  closeButton?: ActionButton;
+  mainButton?: ActionButton;
+  animateMainButton?: boolean;
   style?: ViewStyle;
 };
 export default ActionsFloatingButtonProps;

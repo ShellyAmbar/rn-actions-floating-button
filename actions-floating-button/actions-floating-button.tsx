@@ -5,8 +5,9 @@ import Plus from "../assets/images/PlusIcon.svg";
 import ActionsFloatingButtonProps from "./interfaces";
 const ActionsFloatingButton = ({
   actionButtons,
-  closeButton,
+  mainButton,
   style,
+  animateMainButton,
 }: ActionsFloatingButtonProps) => {
   const styles = createStyles({size: 60});
   const animation = new Animated.Value(0);
@@ -73,13 +74,13 @@ const ActionsFloatingButton = ({
       ))}
       <TouchableOpacity
         onPress={() => {
-          toggleMenu();
-          closeButton?.onClick && closeButton.onClick();
+          animateMainButton && toggleMenu();
+          mainButton?.onClick && mainButton.onClick();
         }}
       >
         <Animated.View style={[styles.button, rotation]}>
-          {closeButton && closeButton?.icon() ? (
-            closeButton.icon()
+          {mainButton && mainButton?.icon() ? (
+            mainButton.icon()
           ) : (
             <Plus width={24} height={24} />
           )}
