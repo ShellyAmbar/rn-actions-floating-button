@@ -16,6 +16,7 @@ const ActionsFloatingButton = ({
     Animated.spring(animation, {
       toValue,
       friction: 5,
+      useNativeDriver: false,
     }).start();
     open.current = !open.current;
   };

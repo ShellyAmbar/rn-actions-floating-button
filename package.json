@@ -1,6 +1,6 @@
 {
   "name": "rn-actions-floating-button",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "An animated floating button with actions buttons",
   "main": "./actions-floating-button/actions-floating-button.tsx",
   "scripts": {
