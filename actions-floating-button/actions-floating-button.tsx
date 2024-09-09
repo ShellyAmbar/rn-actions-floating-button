@@ -55,6 +55,7 @@ const ActionsFloatingButton = ({
         <TouchableOpacity
           onPress={() => {
             button.onClick && button.onClick();
+            animateMainButton && toggleMenu();
           }}
           key={button.id}
         >
