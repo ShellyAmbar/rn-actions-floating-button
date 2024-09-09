@@ -1,13 +1,12 @@
-import {View, TouchableOpacity, Animated, Image} from "react-native";
+import {View, TouchableOpacity, Animated} from "react-native";
 import React, {useRef} from "react";
 import createStyles from "./actions-floating-button.styles";
-import Plus from "../assets/images/PlusIcon.svg";
 import ActionsFloatingButtonProps from "./interfaces";
 const ActionsFloatingButton = ({
   actionButtons,
   mainButton,
   style,
-  animateMainButton,
+  animateMainButton = false,
 }: ActionsFloatingButtonProps) => {
   const styles = createStyles({size: 60});
   const animation = new Animated.Value(0);
@@ -75,15 +74,11 @@ const ActionsFloatingButton = ({
       <TouchableOpacity
         onPress={() => {
           animateMainButton && toggleMenu();
-          mainButton?.onClick && mainButton.onClick();
+          mainButton.onClick && mainButton.onClick();
         }}
       >
-        <Animated.View style={[styles.button, rotation]}>
-          {mainButton && mainButton?.icon() ? (
-            mainButton.icon()
-          ) : (
-            <Plus width={24} height={24} />
-          )}
+        <Animated.View style={[styles.button, mainButton?.style, rotation]}>
+          {mainButton.icon()}
         </Animated.View>
       </TouchableOpacity>
     </View>

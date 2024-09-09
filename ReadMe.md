@@ -22,10 +22,7 @@
           ),
         },
       ]}
-      // closeButton={{
-      //   id: 0,
-      //   icon: () => <AntDesign name="plus" size={30} color="#FFFF" />,
-      // }}
+
     />
 ```
 
@@ -41,5 +38,7 @@
 #ActionsFloatingButton Props -
 | Name | Type | Default |
 | ----- | ----------------- | ------- |
-| actionButtons | ActionButton[]|
-| closeButton | ActionButton|
+| actionButtons?| ActionButton[]|
+| mainButton|ActionButton|
+| animateMainButton?| boolean|
+| style?| ViewStyle|
